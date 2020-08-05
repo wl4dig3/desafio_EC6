@@ -28,26 +28,40 @@ const decagono = {
 // se hace una funcion de nombre poligono
 const poligonos = poligono  => {
     alert()
-    let base = parseInt(document.getElementById('base').value),
-    lado = parseInt(document.getElementById('lado').value),
-    altura = parseInt(document.getElementById('altura').value),
-    apotema = parseInt(document.getElementById('apotema').value)
+        let base = parseInt(document.getElementById('base').value),
+            lado = parseInt(document.getElementById('lado').value),
+            altura = parseInt(document.getElementById('altura').value),
+            apotema = parseInt(document.getElementById('apotema').value),
+            radio = parseInt(document.getElementById('radio').value)
     
-        if(poligono==triangulo) { 
+        if(poligono == triangulo) { 
             console.log(triangulo.area(base,altura))
             console.log(triangulo.perimetro(lado))
         }
 
-        if(poligono==octagono) {
-            console.log(octagono.area())
+        if(poligono == octagono) {
+            let perimetro = octagono.perimetro(lado)
+            console.log(octagono.area(perimetro,apotema))
+            console.log(octagono.perimetro(lado))
          }
 
-        if(poligono==cuadrado) { }
+        if(poligono == cuadrado) {
+            console.log(cuadrado.area(base,altura))
+            console.log(cuadrado.perimetro(base,altura))
+         }
 
-        if(poligono==circulo) { }
+        if(poligono == circulo) {
+            console.log(circulo.area(radio))
+            console.log(circulo.perimetro(radio))
+         }
 
-        if(poligono==decagono) { }
+        if(poligono == decagono) {
+            console.log(decagono.area(lado, apotema))
+            console.log(decanog.perimetro(lado))
+         }
 
         
     };
+
+    // poligonos()
         
